@@ -26,6 +26,7 @@ public class StartCountdown : MonoBehaviour
             uiText = GetComponent<Text>();
             uiText.text = n.ToString();
         }
+        //else ifの条件は理由不明ですが動きません
         else if(countdown == 0)
         {
             uiText = GetComponent<Text>();
