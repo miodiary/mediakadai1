@@ -5,13 +5,13 @@ using UnityEngine;
 public class BallGenerator : MonoBehaviour
 {
     [SerializeField]
-    [Tooltip("¶¬‚·‚éGameObject")]
+    [Tooltip("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½GameObject")]
     private GameObject[] obj;
     [SerializeField]
-    [Tooltip("¶¬‚·‚é”ÍˆÍA")]
+    [Tooltip("rangeA")]
     private Transform rangeA;
     [SerializeField]
-    [Tooltip("¶¬‚·‚é”ÍˆÍB")]
+    [Tooltip("rangeB")]
     private Transform rangeB;
 
     public float interval = 4.0f;

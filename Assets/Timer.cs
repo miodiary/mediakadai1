@@ -21,11 +21,11 @@ public class Timer : MonoBehaviour
         countdownSeconds -= Time.deltaTime;
         int t = Mathf.FloorToInt(countdownSeconds);
         Text uiText = GetComponent<Text>();
-        uiText.text = "c‚èŠÔ:" + t;
+        uiText.text = "åˆ¶é™æ™‚é–“:" + t;
 
         if (countdownSeconds <= 0)
         {
-            // 0•b‚É‚È‚Á‚½‚Æ‚«‚Ìˆ—
+            // 0ç§’ã«ãªã£ãŸã¨ãã®å‡¦ç†
             SceneManager.LoadScene("result");
         }
     }
