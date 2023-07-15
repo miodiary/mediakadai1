@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public static float countdownSeconds;
+    float countdown = 3.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,15 +19,22 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        countdownSeconds -= Time.deltaTime;
-        int t = Mathf.FloorToInt(countdownSeconds);
-        Text uiText = GetComponent<Text>();
-        uiText.text = "制限時間:" + t;
-
-        if (countdownSeconds <= 0)
+        if(countdown >= 0)
         {
-            // 0秒になったときの処理
-            SceneManager.LoadScene("result");
+            countdown -= Time.deltaTime;
+        }
+        if(countdown <= 0)
+        {
+            countdownSeconds -= Time.deltaTime;
+            int t = Mathf.FloorToInt(countdownSeconds);
+            Text uiText = GetComponent<Text>();
+            uiText.text = "制限時間:" + t;
+
+            if (countdownSeconds <= 0)
+            {
+                // 0秒になったときの処理
+                SceneManager.LoadScene("result");
+            }   
         }
     }
 }

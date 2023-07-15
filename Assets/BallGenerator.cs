@@ -17,6 +17,7 @@ public class BallGenerator : MonoBehaviour
     public float interval = 4.0f;
 
     public int number;
+    // float countdown = 3.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -42,4 +43,16 @@ public class BallGenerator : MonoBehaviour
             Instantiate(obj[1], new Vector3(x, y, z), transform.rotation); 
         }
     }
+
+    // void Update()
+    // {
+    //     if(countdown >= 0)
+    //     {
+    //         countdown -= Time.deltaTime;
+    //     }
+    //     if(countdown < 0)
+    //     {
+    //         InvokeRepeating("SpawnObj", 0.1f, interval);
+    //     }
+    // }
 }
